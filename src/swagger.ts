@@ -2,7 +2,7 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import path from "path";
 
-const apiPaths = process.env.NODE_ENV === "production" ? [path.join(__dirname, "./routes/**/*.js")] : ["./src/routes/**/*.ts"]
+// const apiPaths = process.env.NODE_ENV === "production" ? [path.join(__dirname, "./routes/**/*.js")] : ["./src/routes/**/*.ts"]
 
 
 
@@ -16,7 +16,7 @@ const options = {
         },
         servers: [{ url: process.env.NODE_ENV === "production" ? `${process.env.PRODUCTION_API}/api/v1` : "http://localhost:3000/api/v1" }]
     },
-    apis: apiPaths
+    apis: [path.join(__dirname, "./routes/**/*.js")]
 }
 
 
