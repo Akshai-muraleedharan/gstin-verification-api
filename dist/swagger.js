@@ -16,7 +16,7 @@ const options = {
         },
         servers: [{ url: process.env.NODE_ENV === "production" ? `${process.env.PRODUCTION_API}/api/v1` : "http://localhost:3000/api/v1" }]
     },
-    apis: apiPaths,
+    apis: apiPaths
 };
 const swaggerSpec = (0, swagger_jsdoc_1.default)(options);
 exports.default = swaggerSpec;
